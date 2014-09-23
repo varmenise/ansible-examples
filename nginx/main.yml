@@ -4,12 +4,12 @@
   vars:
     http_port: 80
 
-  user: root
+  user: ubuntu
 
 
   tasks:
   - name: install nginx
-    yum: name=nginx state=present
+    apt: name=nginx state=present
 
   - name: ensure nginx is running
     service: name=nginx state=running
